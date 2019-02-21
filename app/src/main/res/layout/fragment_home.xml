@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="8dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_aljazeera"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginRight="4dp"
+                android:layout_weight="1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/aljazeera" />
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cv_bbc"
+                android:layout_width="0dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="4dp"
+                android:layout_weight="1"
+                android:elevation="4dp"
+                app:cardCornerRadius="4dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/bbc_news" />
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_cnn"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/cnn" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_daily"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/daily_mail" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_google"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/google_news" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_huffpost"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/huffpost" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_rt"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/rt" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_independent"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/the_independent" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp">
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_new_york_times"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="4dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/the_new_york_times" />
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cv_time"
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_marginLeft="4dp"
+            android:layout_weight="1"
+            android:elevation="4dp"
+            app:cardCornerRadius="4dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/time" />
+        </android.support.v7.widget.CardView>
+    </LinearLayout>
+    </LinearLayout>
+</ScrollView>
