@@ -12,9 +12,7 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.example.salah.ahmed.newsapp.Model.Article;
 import com.example.salah.ahmed.newsapp.R;
-import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> {
@@ -52,16 +50,13 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
         holder.title_news.setText(news.getTitle());
         holder.date_news.setText(news.getPublishedAt());
 
-        Picasso.with(mContext).load(news.getUrlToImage())
+//        Log.v("img", String.valueOf( mNewsList.get(position).getUrlToImage()));
+
+        Glide.with(mContext)
+                .load(mNewsList.get(position).getUrlToImage())
+                .centerCrop()
+//                .placeholder(R.drawable.loading_spinner)
                 .into(holder.img_news);
-
-        Log.v("img", String.valueOf( mNewsList.get(5).getUrlToImage()));
-
-//        Glide.with(mContext)
-//                .load(news.getUrlToImage())
-//                .centerCrop()
-////                .placeholder(R.drawable.loading_spinner)
-//                .into(holder.img_news);
     }
 
     @Override

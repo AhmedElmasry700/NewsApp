@@ -15,6 +15,8 @@ import com.example.salah.ahmed.newsapp.Adapter.NewsAdapter;
 import com.example.salah.ahmed.newsapp.Model.Article;
 import com.example.salah.ahmed.newsapp.Model.News;
 import com.example.salah.ahmed.newsapp.R;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -23,7 +25,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class NewsActivity extends AppCompatActivity {
+public class NewsActivity extends AppCompatActivity implements NewsAdapter.OnItemClickListener {
 
     private static final String KEY = "78a580d5307f465fba38fe641d47092f";
     private List<Article> articlesList = new ArrayList<>();
@@ -31,12 +33,22 @@ public class NewsActivity extends AppCompatActivity {
     private NewsAdapter adapter;
     private static final String INTENT_KEY = "site";
     private String site;
+    public static final String EXTRA_IMG = "img";
+    public static final String EXTRA_TITLE = "title";
+    public static final String EXTRA_URL = "url";
+    public static final String EXTRA_DESCRIPTION = "description";
 
+    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_news);
+
+
+        mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         Intent intent = getIntent();
         site = intent.getStringExtra(INTENT_KEY);
@@ -70,6 +82,22 @@ public class NewsActivity extends AppCompatActivity {
         linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
-//        adapter.setOnItemClickListener(getActivity());
+        adapter.setOnItemClickListener(this);
+    }
+
+    @Override
+    public void onItemClick(int position) {
+
+        Intent intent = new Intent(NewsActivity.this, DetailActivity.class);
+
+        Article clickedItem = articlesList.get(position);
+
+        intent.putExtra(EXTRA_IMG, clickedItem.getUrlToImage());
+        intent.putExtra(EXTRA_TITLE, clickedItem.getTitle());
+        intent.putExtra(EXTRA_URL, clickedItem.getUrl());
+        intent.putExtra(EXTRA_DESCRIPTION, clickedItem.getDescription());
+
+
+        NewsActivity.this.startActivity(intent);
     }
 }

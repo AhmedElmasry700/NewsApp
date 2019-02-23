@@ -26,7 +26,18 @@
         <activity
             android:name=".Activites.CountryActivity"
             android:parentActivityName=".Activites.MainActivity" />
-        <activity android:name=".Activites.SearchActivity"></activity>
+        <activity android:name=".Activites.SearchActivity" />
+        <activity android:name=".Activites.DetailActivity" />
+
+        <receiver android:name=".Widget.NewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/new_app_widget_info" />
+        </receiver>
     </application>
 
 </manifest>
