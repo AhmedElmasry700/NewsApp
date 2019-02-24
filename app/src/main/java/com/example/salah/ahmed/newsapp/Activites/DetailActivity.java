@@ -4,8 +4,11 @@ import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.ImageView;
@@ -13,8 +16,12 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
+import com.example.salah.ahmed.newsapp.Database.AppDatabase;
+import com.example.salah.ahmed.newsapp.Model.DbNews;
 import com.example.salah.ahmed.newsapp.Widget.NewAppWidget;
 import com.example.salah.ahmed.newsapp.R;
+
+import java.util.List;
 
 import static com.example.salah.ahmed.newsapp.Activites.NewsActivity.EXTRA_DESCRIPTION;
 import static com.example.salah.ahmed.newsapp.Activites.NewsActivity.EXTRA_IMG;
@@ -26,7 +33,16 @@ public class DetailActivity extends AppCompatActivity {
     ImageView poster_img;
     TextView title_tv, publishBy_tv;
     WebView webView;
-    private String title, imgPoster, url, description;
+
+    String title, imgPoster, url, description;
+    FloatingActionButton fab;
+//    boolean boolfavo = false;
+
+
+    //    private DbNews dbNews;
+    private AppDatabase mDb;
+//    private List<DbNews> mFavoList;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +74,23 @@ public class DetailActivity extends AppCompatActivity {
 
         description = intent.getStringExtra(EXTRA_DESCRIPTION);
 
+        mDb = AppDatabase.getAppDatabase(getApplicationContext());
+
+        fab = findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                DbNews dbNews = new DbNews();
+                dbNews.setDb_newsPster(imgPoster);
+                dbNews.setDb_newsTitle(title);
+                dbNews.setDb_newsUrl(url);
+                mDb.newsDao().insertAll(dbNews);
+                Log.d("test", String.valueOf(dbNews.getDb_newsPster()));
+            }
+        });
+
         DataToWidget();
+
     }
 
 
@@ -80,4 +112,21 @@ public class DetailActivity extends AppCompatActivity {
         finish();
         Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show();
     }
+
+
+//    private boolean checkid() {
+//
+//        if (!appDatabase.newsDao().getNewsWithId(id)) {
+//            fab.setBackgroundResource(R.drawable.ic_favorite_border_white_24dp);
+//
+//            return true;
+//        } else  {
+//
+//            fab.setBackgroundResource(R.drawable.ic_favorite_white_24dp);
+//            return false;
+//        }
+//    }
+
+
+
 }

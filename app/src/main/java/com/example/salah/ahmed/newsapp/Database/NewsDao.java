@@ -1,0 +1,24 @@
+package com.example.salah.ahmed.newsapp.Database;
+
+import android.arch.persistence.room.Dao;
+import android.arch.persistence.room.Delete;
+import android.arch.persistence.room.Insert;
+import android.arch.persistence.room.Query;
+
+import com.example.salah.ahmed.newsapp.Model.DbNews;
+
+import java.util.List;
+
+@Dao
+public interface NewsDao {
+
+    @Query("SELECT * FROM dbnews")
+    List<DbNews> getAll();
+
+
+    @Insert
+    void insertAll(DbNews... dbNewss);
+
+    @Delete
+    void delete(DbNews dbNews);
+}

@@ -1,6 +1,5 @@
 package com.example.salah.ahmed.newsapp.API;
 
-import android.arch.core.BuildConfig;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

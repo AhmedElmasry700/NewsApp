@@ -2,7 +2,6 @@ package com.example.salah.ahmed.newsapp.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,50 +9,49 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.example.salah.ahmed.newsapp.Model.Article;
+import com.example.salah.ahmed.newsapp.Model.DbNews;
 import com.example.salah.ahmed.newsapp.R;
 
 import java.util.List;
 
-public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> {
-
-    private List<Article> mNewsList;
+public class FavoAdapter extends RecyclerView.Adapter<FavoAdapter.MyViewHolder> {
+    private List<DbNews> mNewsList;
     private Context mContext;
-    private OnItemClickListener mListener;
+    private FavoAdapter.OnItemClickListener mListener;
 
-    public interface OnItemClickListener {
-        void onItemClick(int position);
-    }
-
-    public void setOnItemClickListener(OnItemClickListener listener) {
-        mListener = listener;
-    }
-
-    public NewsAdapter(Context context, List<Article> newsList) {
-        this.mNewsList = newsList;
+    public FavoAdapter(Context context, List<DbNews> moviesList) {
+        this.mNewsList = moviesList;
         this.mContext = context;
     }
 
+    public void setOnItemClickListener(FavoAdapter.OnItemClickListener listener) {
+        mListener = listener;
+    }
 
-    @Override
-    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(mContext)
-                .inflate(R.layout.news_list, parent, false);
-
-        return new MyViewHolder(v);
+    public void setTasks(List<DbNews> taskEntries) {
+        mNewsList = taskEntries;
+        notifyDataSetChanged();
     }
 
     @Override
-    public void onBindViewHolder(MyViewHolder holder, int position) {
-        Article news = mNewsList.get(position);
+    public FavoAdapter.MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(mContext)
+                .inflate(R.layout.news_list, parent, false);
 
-        holder.title_news.setText(news.getTitle());
-        holder.date_news.setText(news.getPublishedAt());
+        return new FavoAdapter.MyViewHolder(v);
+    }
+
+    @Override
+    public void onBindViewHolder(FavoAdapter.MyViewHolder holder, int position) {
+        DbNews news = mNewsList.get(position);
+
+        holder.title_news.setText(news.getDb_newsTitle());
+//        holder.date_news.setText(news.getPublishedAt());
 
 //        Log.v("img", String.valueOf( mNewsList.get(position).getUrlToImage()));
 
         Glide.with(mContext)
-                .load(mNewsList.get(position).getUrlToImage())
+                .load(mNewsList.get(position).getDb_newsPster())
                 .centerCrop()
 //                .placeholder(R.drawable.loading_spinner)
                 .into(holder.img_news);
@@ -62,6 +60,10 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
     @Override
     public int getItemCount() {
         return mNewsList.size();
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(int position);
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
@@ -88,6 +90,4 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
             });
         }
     }
-
-
 }
