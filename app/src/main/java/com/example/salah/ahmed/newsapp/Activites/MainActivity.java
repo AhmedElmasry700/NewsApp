@@ -17,16 +17,20 @@ import android.content.Context;
 import android.app.Fragment;
 
 
+import com.crashlytics.android.Crashlytics;
 import com.example.salah.ahmed.newsapp.Fragment.Fragment_Favorite;
 import com.example.salah.ahmed.newsapp.Fragment.Fragment_Home;
 import com.example.salah.ahmed.newsapp.Fragment.Fragment_Public;
 import com.example.salah.ahmed.newsapp.R;
+
+import io.fabric.sdk.android.Fabric;
 
 
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.btn_nav);
