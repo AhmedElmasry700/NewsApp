@@ -19,6 +19,6 @@
         app:menu="@menu/bottom_navigation"
         android:layout_alignParentBottom="true"
         android:background="?android:attr/windowBackground"
-        android:elevation="4dp"/>
+        android:elevation="@dimen/margin_padding_4" />
 
 </RelativeLayout>

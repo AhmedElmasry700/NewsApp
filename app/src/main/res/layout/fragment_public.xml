@@ -9,7 +9,7 @@
 
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="8dp"
+        android:layout_margin="@dimen/margin_padding_8"
         android:orientation="vertical">
 
         <LinearLayout
@@ -21,10 +21,10 @@
                 android:id="@+id/cv_ae"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:elevation="@dimen/margin_padding_4"
+                app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -36,10 +36,10 @@
                 android:id="@+id/cv_de"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:elevation="@dimen/margin_padding_4"
+                app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -58,10 +58,10 @@
                 android:id="@+id/cv_eg"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:elevation="@dimen/margin_padding_4"
+                app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -73,10 +73,10 @@
                 android:id="@+id/cv_fr"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:elevation="@dimen/margin_padding_4"
+                app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -88,16 +88,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="@dimen/margin_padding_8">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cv_gb"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:elevation="@dimen/margin_padding_4"
+                app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -109,10 +109,10 @@
                 android:id="@+id/cv_ru"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:elevation="@dimen/margin_padding_4"
+                app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -124,16 +124,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="@dimen/margin_padding_8">
 
             <android.support.v7.widget.CardView
                 android:id="@+id/cv_tr"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginRight="4dp"
+                android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:elevation="@dimen/margin_padding_4"
+                app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
@@ -145,10 +145,10 @@
                 android:id="@+id/cv_us"
                 android:layout_width="0dp"
                 android:layout_height="120dp"
-                android:layout_marginLeft="4dp"
+                android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
-                android:elevation="4dp"
-                app:cardCornerRadius="4dp">
+                android:elevation="@dimen/margin_padding_4"
+                app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
