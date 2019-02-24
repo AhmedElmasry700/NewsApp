@@ -36,12 +36,8 @@ public class DetailActivity extends AppCompatActivity {
 
     String title, imgPoster, url, description;
     FloatingActionButton fab;
-//    boolean boolfavo = false;
 
-
-    //    private DbNews dbNews;
     private AppDatabase mDb;
-//    private List<DbNews> mFavoList;
 
 
     @Override
@@ -126,7 +122,6 @@ public class DetailActivity extends AppCompatActivity {
 //            return false;
 //        }
 //    }
-
 
 
 }

@@ -15,6 +15,7 @@ import com.example.salah.ahmed.newsapp.Activites.NewsActivity;
 import com.example.salah.ahmed.newsapp.Adapter.FavoAdapter;
 import com.example.salah.ahmed.newsapp.Adapter.NewsAdapter;
 import com.example.salah.ahmed.newsapp.Database.AppDatabase;
+import com.example.salah.ahmed.newsapp.Database.NewsDao;
 import com.example.salah.ahmed.newsapp.Model.DbNews;
 import com.example.salah.ahmed.newsapp.R;
 import com.google.android.gms.ads.AdRequest;
@@ -28,8 +29,8 @@ public class Fragment_Favorite extends Fragment implements NewsAdapter.OnItemCli
     private List<DbNews> newsList;
     private LinearLayoutManager linearLayoutManager;
     private FavoAdapter adapter;
-    //    private AdView mAdView;
     private AppDatabase mDb;
+
 
     @Nullable
     @Override
@@ -46,9 +47,6 @@ public class Fragment_Favorite extends Fragment implements NewsAdapter.OnItemCli
         recyclerView.setAdapter(adapter);
 //        adapter.setOnItemClickListener(getActivity());
 
-//        mAdView = view.findViewById(R.id.adView);
-//        AdRequest adRequest = new AdRequest.Builder().build();
-//        mAdView.loadAd(adRequest);
         return view;
     }
 
@@ -58,10 +56,4 @@ public class Fragment_Favorite extends Fragment implements NewsAdapter.OnItemCli
     }
 
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        adapter.setTasks(mDb.newsDao().getAll());
-
-    }
 }
