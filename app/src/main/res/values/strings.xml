@@ -3,5 +3,25 @@
     <string name="appwidget_text">EXAMPLE</string>
     <string name="add_widget">Add widget</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="detail_img">Detail_img</string>
+    <string name="aljazeera">aljazeera</string>
+    <string name="bbc_news">bbc news</string>
+    <string name="cnn">CNN</string>
+    <string name="daily_maily">Daily Maily</string>
+    <string name="google_news">Google News</string>
+    <string name="huff_post">Huff Post</string>
+    <string name="rt">rt</string>
+    <string name="the_independent">the independent</string>
+    <string name="the_new_york_times">the new york times</string>
+    <string name="time">time</string>
+    <string name="uae">UAE</string>
+    <string name="german">German</string>
+    <string name="egypt">Egypt</string>
+    <string name="franch">Franch</string>
+    <string name="uk">UK</string>
+    <string name="russia">Russia</string>
+    <string name="turkey">Turkey</string>
+    <string name="usa">USA</string>
+    <string name="news_img">News Img</string>
 
 </resources>

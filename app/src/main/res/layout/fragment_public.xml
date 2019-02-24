@@ -8,7 +8,7 @@
     <LinearLayout
 
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_padding_8"
         android:orientation="vertical">
 
@@ -24,11 +24,13 @@
                 android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginEnd="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/uae"
                     android:src="@drawable/ae" />
             </android.support.v7.widget.CardView>
 
@@ -39,11 +41,13 @@
                 android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginStart="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/german"
                     android:src="@drawable/de" />
             </android.support.v7.widget.CardView>
         </LinearLayout>
@@ -61,11 +65,13 @@
                 android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginEnd="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/egypt"
                     android:src="@drawable/eg" />
             </android.support.v7.widget.CardView>
 
@@ -76,11 +82,13 @@
                 android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginStart="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/franch"
                     android:src="@drawable/fr" />
             </android.support.v7.widget.CardView>
         </LinearLayout>
@@ -97,11 +105,13 @@
                 android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginEnd="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/uk"
                     android:src="@drawable/gb" />
             </android.support.v7.widget.CardView>
 
@@ -112,11 +122,13 @@
                 android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginStart="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/russia"
                     android:src="@drawable/ru" />
             </android.support.v7.widget.CardView>
         </LinearLayout>
@@ -133,11 +145,13 @@
                 android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginEnd="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/turkey"
                     android:src="@drawable/tr" />
             </android.support.v7.widget.CardView>
 
@@ -148,11 +162,13 @@
                 android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginStart="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/usa"
                     android:src="@drawable/us" />
             </android.support.v7.widget.CardView>
         </LinearLayout>

@@ -46,7 +46,6 @@ public class DetailActivity extends AppCompatActivity {
         setContentView(R.layout.activity_detail);
         poster_img = findViewById(R.id.detail_img);
         title_tv = findViewById(R.id.detail_title);
-        publishBy_tv = findViewById(R.id.detail_publishBy);
         webView = findViewById(R.id.webView);
 
         Intent intent = getIntent();

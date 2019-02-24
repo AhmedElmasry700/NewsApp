@@ -37,6 +37,7 @@ public class Fragment_Favorite extends Fragment implements NewsAdapter.OnItemCli
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_favorite, container, false);
 
+        mDb = AppDatabase.getAppDatabase(getActivity().getApplicationContext());
         newsList = mDb.newsDao().getAll();
         Log.d("Data", String.valueOf(newsList));
         RecyclerView recyclerView = view.findViewById(R.id.rv_favo);

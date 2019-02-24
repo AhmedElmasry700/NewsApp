@@ -24,11 +24,13 @@
                 android:layout_marginRight="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginEnd="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/aljazeera"
                     android:src="@drawable/aljazeera" />
             </android.support.v7.widget.CardView>
 
@@ -39,11 +41,13 @@
                 android:layout_marginLeft="@dimen/margin_padding_4"
                 android:layout_weight="1"
                 android:elevation="@dimen/margin_padding_4"
+                android:layout_marginStart="@dimen/margin_padding_4"
                 app:cardCornerRadius="@dimen/margin_padding_4">
 
                 <ImageView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:contentDescription="@string/bbc_news"
                     android:src="@drawable/bbc_news" />
             </android.support.v7.widget.CardView>
         </LinearLayout>
@@ -61,11 +65,13 @@
             android:layout_marginRight="@dimen/margin_padding_4"
             android:layout_weight="1"
             android:elevation="@dimen/margin_padding_4"
+            android:layout_marginEnd="@dimen/margin_padding_4"
             app:cardCornerRadius="@dimen/margin_padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/cnn"
                 android:src="@drawable/cnn" />
         </android.support.v7.widget.CardView>
 
@@ -76,11 +82,13 @@
             android:layout_marginLeft="@dimen/margin_padding_4"
             android:layout_weight="1"
             android:elevation="@dimen/margin_padding_4"
+            android:layout_marginStart="@dimen/margin_padding_4"
             app:cardCornerRadius="@dimen/margin_padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/daily_maily"
                 android:src="@drawable/daily_mail" />
         </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -97,11 +105,13 @@
             android:layout_marginRight="@dimen/margin_padding_4"
             android:layout_weight="1"
             android:elevation="@dimen/margin_padding_4"
+            android:layout_marginEnd="@dimen/margin_padding_4"
             app:cardCornerRadius="@dimen/margin_padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/google_news"
                 android:src="@drawable/google_news" />
         </android.support.v7.widget.CardView>
 
@@ -112,11 +122,13 @@
             android:layout_marginLeft="@dimen/margin_padding_4"
             android:layout_weight="1"
             android:elevation="@dimen/margin_padding_4"
+            android:layout_marginStart="@dimen/margin_padding_4"
             app:cardCornerRadius="@dimen/margin_padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/huff_post"
                 android:src="@drawable/huffpost" />
         </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -133,11 +145,13 @@
             android:layout_marginRight="@dimen/margin_padding_4"
             android:layout_weight="1"
             android:elevation="@dimen/margin_padding_4"
+            android:layout_marginEnd="@dimen/margin_padding_4"
             app:cardCornerRadius="@dimen/margin_padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/rt"
                 android:src="@drawable/rt" />
         </android.support.v7.widget.CardView>
 
@@ -148,11 +162,13 @@
             android:layout_marginLeft="@dimen/margin_padding_4"
             android:layout_weight="1"
             android:elevation="@dimen/margin_padding_4"
+            android:layout_marginStart="@dimen/margin_padding_4"
             app:cardCornerRadius="@dimen/margin_padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/the_independent"
                 android:src="@drawable/the_independent" />
         </android.support.v7.widget.CardView>
     </LinearLayout>
@@ -170,11 +186,13 @@
             android:layout_marginRight="@dimen/margin_padding_4"
             android:layout_weight="1"
             android:elevation="@dimen/margin_padding_4"
+            android:layout_marginEnd="@dimen/margin_padding_4"
             app:cardCornerRadius="@dimen/margin_padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/the_new_york_times"
                 android:src="@drawable/the_new_york_times" />
         </android.support.v7.widget.CardView>
 
@@ -185,11 +203,13 @@
             android:layout_marginLeft="@dimen/margin_padding_4"
             android:layout_weight="1"
             android:elevation="@dimen/margin_padding_4"
+            android:layout_marginStart="@dimen/margin_padding_4"
             app:cardCornerRadius="@dimen/margin_padding_4">
 
             <ImageView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:contentDescription="@string/time"
                 android:src="@drawable/time" />
         </android.support.v7.widget.CardView>
     </LinearLayout>
