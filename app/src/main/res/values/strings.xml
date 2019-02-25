@@ -23,5 +23,8 @@
     <string name="turkey">Turkey</string>
     <string name="usa">USA</string>
     <string name="news_img">News Img</string>
+    <string name="country">Country</string>
+    <string name="home">Home</string>
+    <string name="favorite">Favorite</string>
 
 </resources>
