@@ -4,9 +4,9 @@ import android.appwidget.AppWidgetManager;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
@@ -18,10 +18,8 @@ import android.widget.Toast;
 import com.bumptech.glide.Glide;
 import com.example.salah.ahmed.newsapp.Database.AppDatabase;
 import com.example.salah.ahmed.newsapp.Model.DbNews;
-import com.example.salah.ahmed.newsapp.Widget.NewAppWidget;
 import com.example.salah.ahmed.newsapp.R;
-
-import java.util.List;
+import com.example.salah.ahmed.newsapp.Widget.NewAppWidget;
 
 import static com.example.salah.ahmed.newsapp.Activites.NewsActivity.EXTRA_DESCRIPTION;
 import static com.example.salah.ahmed.newsapp.Activites.NewsActivity.EXTRA_IMG;
@@ -30,12 +28,15 @@ import static com.example.salah.ahmed.newsapp.Activites.NewsActivity.EXTRA_URL;
 
 public class DetailActivity extends AppCompatActivity {
     private static final String KEY_TITLE_PREFERENCES = "widget_title";
-    ImageView poster_img;
-    TextView title_tv, publishBy_tv;
-    WebView webView;
+    private ImageView poster_img;
+    private TextView title_tv;
+    private WebView webView;
 
-    String title, imgPoster, url, description;
-    FloatingActionButton fab;
+    private String title;
+    private String imgPoster;
+    private String url;
+    private String description;
+    private FloatingActionButton fab;
 
     private AppDatabase mDb;
 
@@ -89,7 +90,7 @@ public class DetailActivity extends AppCompatActivity {
     }
 
 
-    public void DataToWidget() {
+    private void DataToWidget() {
         StringBuilder sb = new StringBuilder();
         sb.append(title).append("\n\n").append(description);
         SharedPreferences pre = this.getSharedPreferences(KEY_TITLE_PREFERENCES, 0);

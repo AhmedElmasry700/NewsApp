@@ -16,7 +16,7 @@ import java.util.List;
 
 public class FavoAdapter extends RecyclerView.Adapter<FavoAdapter.MyViewHolder> {
     private List<DbNews> mNewsList;
-    private Context mContext;
+    private final Context mContext;
     private FavoAdapter.OnItemClickListener mListener;
 
     public FavoAdapter(Context context, List<DbNews> moviesList) {
@@ -62,15 +62,16 @@ public class FavoAdapter extends RecyclerView.Adapter<FavoAdapter.MyViewHolder> 
         return mNewsList.size();
     }
 
-    public interface OnItemClickListener {
+    interface OnItemClickListener {
         void onItemClick(int position);
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        private ImageView img_news;
-        private TextView title_news, date_news;
+        private final ImageView img_news;
+        private final TextView title_news;
+        private final TextView date_news;
 
-        public MyViewHolder(View itemView) {
+        MyViewHolder(View itemView) {
             super(itemView);
             img_news = itemView.findViewById(R.id.news_img);
             title_news = itemView.findViewById(R.id.news_title);

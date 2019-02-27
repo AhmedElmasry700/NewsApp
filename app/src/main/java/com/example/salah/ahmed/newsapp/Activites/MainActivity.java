@@ -2,20 +2,12 @@ package com.example.salah.ahmed.newsapp.Activites;
 
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.SearchView;
-import android.widget.Switch;
-import android.view.MenuInflater;
-import android.app.SearchManager;
-import android.content.Context;
-import android.app.Fragment;
-
 
 import com.crashlytics.android.Crashlytics;
 import com.example.salah.ahmed.newsapp.Fragment.Fragment_Favorite;
@@ -41,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
                 .commit();
     }
 
-    private BottomNavigationView.OnNavigationItemSelectedListener listener =
+    private final BottomNavigationView.OnNavigationItemSelectedListener listener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
                 @Override
                 public boolean onNavigationItemSelected(@NonNull MenuItem item) {

@@ -14,8 +14,8 @@ import com.example.salah.ahmed.newsapp.R;
 public class NewAppWidget extends AppWidgetProvider {
     private static final String KEY_TITLE_PREFERENCES = "widget_title";
 
-    static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
-                                int appWidgetId) {
+    private static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
+                                        int appWidgetId) {
 
 //        CharSequence widgetText = context.getString(R.string.appwidget_text);
         // Construct the RemoteViews object

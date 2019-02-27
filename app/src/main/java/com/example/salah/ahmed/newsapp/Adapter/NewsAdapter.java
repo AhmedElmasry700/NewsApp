@@ -2,7 +2,6 @@ package com.example.salah.ahmed.newsapp.Adapter;
 
 import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,8 +16,8 @@ import java.util.List;
 
 public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> {
 
-    private List<Article> mNewsList;
-    private Context mContext;
+    private final List<Article> mNewsList;
+    private final Context mContext;
     private OnItemClickListener mListener;
 
     public interface OnItemClickListener {
@@ -65,10 +64,11 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        private ImageView img_news;
-        private TextView title_news, date_news;
+        private final ImageView img_news;
+        private final TextView title_news;
+        private final TextView date_news;
 
-        public MyViewHolder(View itemView) {
+        MyViewHolder(View itemView) {
             super(itemView);
             img_news = itemView.findViewById(R.id.news_img);
             title_news = itemView.findViewById(R.id.news_title);

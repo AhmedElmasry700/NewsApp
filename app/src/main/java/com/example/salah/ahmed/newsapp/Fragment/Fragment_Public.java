@@ -15,9 +15,16 @@ import com.example.salah.ahmed.newsapp.R;
 
 public class Fragment_Public extends Fragment {
 
-    CardView ae, de, eg, fr, gb, ru, tr, us;
+    private CardView ae;
+    private CardView de;
+    private CardView eg;
+    private CardView fr;
+    private CardView gb;
+    private CardView ru;
+    private CardView tr;
+    private CardView us;
     private Intent intent;
-    View view;
+    private View view;
     private static final String INTENT_KEY_country = "country";
     @Nullable
     @Override

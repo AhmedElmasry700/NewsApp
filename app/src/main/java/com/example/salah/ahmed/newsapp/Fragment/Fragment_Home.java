@@ -6,33 +6,25 @@ import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
-import android.widget.Toast;
 
-import com.example.salah.ahmed.newsapp.API.JsonParse;
-import com.example.salah.ahmed.newsapp.API.RetrofitClient;
 import com.example.salah.ahmed.newsapp.Activites.NewsActivity;
-import com.example.salah.ahmed.newsapp.Adapter.NewsAdapter;
-import com.example.salah.ahmed.newsapp.Model.Article;
-import com.example.salah.ahmed.newsapp.Model.News;
 import com.example.salah.ahmed.newsapp.R;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import retrofit2.Call;
-import retrofit2.Callback;
-import retrofit2.Response;
-
 public class Fragment_Home extends Fragment {
-    View view;
-    CardView aljazeera, bbc, cnn, daily_mail, google, huffpost, rt, the_independent, the_new_york, time;
+    private View view;
+    private CardView aljazeera;
+    private CardView bbc;
+    private CardView cnn;
+    private CardView daily_mail;
+    private CardView google;
+    private CardView huffpost;
+    private CardView rt;
+    private CardView the_independent;
+    private CardView the_new_york;
+    private CardView time;
     private Intent intent;
 
     private static final String INTENT_KEY = "site";

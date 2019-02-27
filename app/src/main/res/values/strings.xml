@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">News App</string>
     <string name="appwidget_text">EXAMPLE</string>
-    <string name="add_widget">Add widget</string>
     <string name="banner_ad_unit_id">ca-app-pub-3940256099942544/6300978111</string>
     <string name="detail_img">Detail_img</string>
     <string name="aljazeera">aljazeera</string>
@@ -26,5 +25,7 @@
     <string name="country">Country</string>
     <string name="home">Home</string>
     <string name="favorite">Favorite</string>
+    <string name="search">Search</string>
+    <string name="title">title</string>
 
 </resources>

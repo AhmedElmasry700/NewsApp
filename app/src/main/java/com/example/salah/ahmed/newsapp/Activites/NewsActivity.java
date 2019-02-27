@@ -1,13 +1,12 @@
 package com.example.salah.ahmed.newsapp.Activites;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.example.salah.ahmed.newsapp.API.JsonParse;
 import com.example.salah.ahmed.newsapp.API.RetrofitClient;
@@ -29,16 +28,11 @@ public class NewsActivity extends AppCompatActivity implements NewsAdapter.OnIte
 
     private static final String KEY = "78a580d5307f465fba38fe641d47092f";
     private List<Article> articlesList = new ArrayList<>();
-    private LinearLayoutManager linearLayoutManager;
-    private NewsAdapter adapter;
     private static final String INTENT_KEY = "site";
-    private String site;
     public static final String EXTRA_IMG = "img";
     public static final String EXTRA_TITLE = "title";
     public static final String EXTRA_URL = "url";
     public static final String EXTRA_DESCRIPTION = "description";
-
-    private AdView mAdView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +40,12 @@ public class NewsActivity extends AppCompatActivity implements NewsAdapter.OnIte
         setContentView(R.layout.activity_news);
 
 
-        mAdView = findViewById(R.id.adView);
+        AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
         Intent intent = getIntent();
-        site = intent.getStringExtra(INTENT_KEY);
+        String site = intent.getStringExtra(INTENT_KEY);
         Log.v("intent", site);
 
 
@@ -77,9 +71,9 @@ public class NewsActivity extends AppCompatActivity implements NewsAdapter.OnIte
 
     private void generateRvList(List<Article> articallist) {
         RecyclerView recyclerView = findViewById(R.id.rv_aljazeera);
-        adapter = new NewsAdapter(NewsActivity.this, articallist);
+        NewsAdapter adapter = new NewsAdapter(NewsActivity.this, articallist);
         recyclerView.setHasFixedSize(true);
-        linearLayoutManager = new LinearLayoutManager(this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView.setAdapter(adapter);
         adapter.setOnItemClickListener(this);

@@ -1,23 +1,19 @@
 package com.example.salah.ahmed.newsapp.Activites;
 
 
+import android.app.SearchManager;
 import android.content.Context;
+import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
-import android.view.MenuItem;
-import android.app.SearchManager;
-import android.support.v7.widget.SearchView;
-import android.widget.SearchView.OnQueryTextListener;
-import android.widget.Switch;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 
-import android.content.Context;
 import com.example.salah.ahmed.newsapp.API.JsonParse;
 import com.example.salah.ahmed.newsapp.API.RetrofitClient;
 import com.example.salah.ahmed.newsapp.Adapter.NewsAdapter;
@@ -36,9 +32,7 @@ public class SearchActivity extends AppCompatActivity {
 
     private static final String KEY = "78a580d5307f465fba38fe641d47092f";
     private List<Article> articlesList = new ArrayList<>();
-    private LinearLayoutManager linearLayoutManager;
-    private NewsAdapter adapter;
-    RecyclerView recyclerView;
+    private RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +43,7 @@ public class SearchActivity extends AppCompatActivity {
 
     }
 
-    public void loadJson(String keyWord) {
+    private void loadJson(String keyWord) {
 
         JsonParse service = RetrofitClient.getRetrofit().create(JsonParse.class);
         Call<News> call = service.getNewsSearch(keyWord, "publishedAt", KEY);
@@ -84,10 +78,10 @@ public class SearchActivity extends AppCompatActivity {
 //        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView = findViewById(R.id.rv_country);
 
-        linearLayoutManager = new LinearLayoutManager(SearchActivity.this);
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(SearchActivity.this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);
-        adapter = new NewsAdapter(SearchActivity.this, articlesList);
+        NewsAdapter adapter = new NewsAdapter(SearchActivity.this, articlesList);
         recyclerView.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 //        adapter.setOnItemClickListener(getActivity());
