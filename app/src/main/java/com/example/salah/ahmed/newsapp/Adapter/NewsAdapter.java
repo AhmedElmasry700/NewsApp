@@ -49,7 +49,6 @@ public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.MyViewHolder> 
         holder.title_news.setText(news.getTitle());
         holder.date_news.setText(news.getPublishedAt());
 
-//        Log.v("img", String.valueOf( mNewsList.get(position).getUrlToImage()));
 
         Glide.with(mContext)
                 .load(mNewsList.get(position).getUrlToImage())

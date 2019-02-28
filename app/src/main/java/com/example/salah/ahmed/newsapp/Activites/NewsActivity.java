@@ -57,12 +57,11 @@ public class NewsActivity extends AppCompatActivity implements NewsAdapter.OnIte
                 articlesList = response.body().getArticles();
                 generateRvList(articlesList);
                 Log.v("3aaaa", String.valueOf(articlesList));
-//                Toast.makeText(NewsActivity.this, "ولا يامحمد يامحرووس يلااا", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(@NonNull Call<News> call, @NonNull Throwable t) {
-//                Toast.makeText(NewsActivity.this, "لااااااااااااا", Toast.LENGTH_SHORT).show();
+
                 Log.v("nooooooo", String.valueOf(t));
 
             }

@@ -48,15 +48,11 @@ public class CountryActivity extends AppCompatActivity {
                 articlesList = response.body().getArticles();
 
                 generatecountryList(articlesList);
-                Log.v("3aaaa", String.valueOf(articlesList));
-//                Toast.makeText(CountryActivity.this, "ولا يامحمد يامحرووس يلااا", Toast.LENGTH_SHORT).show();
+
             }
 
             @Override
             public void onFailure(@NonNull Call<News> call, @NonNull Throwable t) {
-//                Toast.makeText(CountryActivity.this, "لااااااااااااا", Toast.LENGTH_SHORT).show();
-                Log.v("nooooooo", String.valueOf(t));
-
             }
         });
     }

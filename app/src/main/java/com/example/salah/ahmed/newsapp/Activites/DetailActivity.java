@@ -85,12 +85,6 @@ public class DetailActivity extends AppCompatActivity {
                 addNewsViewModel.addBorrow(new DbNews(imgPoster, title, url));
                 finish();
 
-//                DbNews dbNews = new DbNews();
-//                dbNews.setDb_newsPster(imgPoster);
-//                dbNews.setDb_newsTitle(title);
-//                dbNews.setDb_newsUrl(url);
-//                mDb.newsDao().insertAll(dbNews);
-//                Log.d("test", String.valueOf(dbNews.getDb_newsPster()));
             }
         });
 
@@ -119,18 +113,6 @@ public class DetailActivity extends AppCompatActivity {
     }
 
 
-//    private boolean checkid() {
-//
-//        if (!appDatabase.newsDao().getNewsWithId(id)) {
-//            fab.setBackgroundResource(R.drawable.ic_favorite_border_white_24dp);
-//
-//            return true;
-//        } else  {
-//
-//            fab.setBackgroundResource(R.drawable.ic_favorite_white_24dp);
-//            return false;
-//        }
-//    }
 
 
 }

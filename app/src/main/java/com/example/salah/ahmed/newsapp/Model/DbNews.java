@@ -25,24 +25,12 @@ public class DbNews {
         return db_newsPster;
     }
 
-    public void setDb_newsPster(String db_newsPster) {
-        this.db_newsPster = db_newsPster;
-    }
-
     public String getDb_newsTitle() {
         return db_newsTitle;
     }
 
-    public void setDb_newsTitle(String db_newsTitle) {
-        this.db_newsTitle = db_newsTitle;
-    }
-
     public String getDb_newsUrl() {
         return db_newsUrl;
-    }
-
-    public void setDb_newsUrl(String db_newsUrl) {
-        this.db_newsUrl = db_newsUrl;
     }
 
     @NonNull

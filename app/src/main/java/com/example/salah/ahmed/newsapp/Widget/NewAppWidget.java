@@ -17,8 +17,7 @@ public class NewAppWidget extends AppWidgetProvider {
     private static void updateAppWidget(Context context, AppWidgetManager appWidgetManager,
                                         int appWidgetId) {
 
-//        CharSequence widgetText = context.getString(R.string.appwidget_text);
-        // Construct the RemoteViews object
+
         RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.new_app_widget);
 
         SharedPreferences pre = context.getSharedPreferences(KEY_TITLE_PREFERENCES, 0);

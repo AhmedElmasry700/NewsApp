@@ -46,9 +46,6 @@ public class FavoAdapter extends RecyclerView.Adapter<FavoAdapter.MyViewHolder> 
         DbNews news = mNewsList.get(position);
 
         holder.title_news.setText(news.getDb_newsTitle());
-//        holder.date_news.setText(news.getPublishedAt());
-
-//        Log.v("img", String.valueOf( mNewsList.get(position).getUrlToImage()));
 
         Glide.with(mContext)
                 .load(mNewsList.get(position).getDb_newsPster())

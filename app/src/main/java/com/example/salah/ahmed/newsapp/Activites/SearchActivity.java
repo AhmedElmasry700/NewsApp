@@ -57,12 +57,10 @@ public class SearchActivity extends AppCompatActivity {
                 generateRvList(articlesList);
 
                 Log.v("3aaaa", String.valueOf(articlesList));
-//                Toast.makeText(NewsActivity.this, "ولا يامحمد يامحرووس يلااا", Toast.LENGTH_SHORT).show();
             }
 
             @Override
             public void onFailure(@NonNull Call<News> call, @NonNull Throwable t) {
-//                Toast.makeText(NewsActivity.this, "لااااااااااااا", Toast.LENGTH_SHORT).show();
                 Log.v("nooooooo", String.valueOf(t));
 
             }
@@ -72,10 +70,6 @@ public class SearchActivity extends AppCompatActivity {
     private void generateRvList(List<Article> articallist) {
 
 
-
-//        recyclerView.setHasFixedSize(true);
-//        linearLayoutManager = new LinearLayoutManager(this);
-//        recyclerView.setLayoutManager(linearLayoutManager);
         recyclerView = findViewById(R.id.rv_country);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(SearchActivity.this);
