@@ -28,7 +28,7 @@ public class FavoAdapter extends RecyclerView.Adapter<FavoAdapter.MyViewHolder> 
         mListener = listener;
     }
 
-    public void setTasks(List<DbNews> taskEntries) {
+    public void addItems(List<DbNews> taskEntries) {
         mNewsList = taskEntries;
         notifyDataSetChanged();
     }

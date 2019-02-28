@@ -15,6 +15,12 @@ public class DbNews {
     @NonNull
     private int db_id;
 
+    public DbNews(String db_newsPster, String db_newsTitle, String db_newsUrl) {
+        this.db_newsPster = db_newsPster;
+        this.db_newsTitle = db_newsTitle;
+        this.db_newsUrl = db_newsUrl;
+    }
+
     public String getDb_newsPster() {
         return db_newsPster;
     }

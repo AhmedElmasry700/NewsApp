@@ -1,13 +1,13 @@
 package com.example.salah.ahmed.newsapp.Activites;
 
 import android.appwidget.AppWidgetManager;
+import android.arch.lifecycle.ViewModelProviders;
 import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
@@ -19,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.example.salah.ahmed.newsapp.Database.AppDatabase;
 import com.example.salah.ahmed.newsapp.Model.DbNews;
 import com.example.salah.ahmed.newsapp.R;
+import com.example.salah.ahmed.newsapp.ViewModel.AddNewsViewModel;
 import com.example.salah.ahmed.newsapp.Widget.NewAppWidget;
 
 import static com.example.salah.ahmed.newsapp.Activites.NewsActivity.EXTRA_DESCRIPTION;
@@ -39,6 +40,8 @@ public class DetailActivity extends AppCompatActivity {
     private FloatingActionButton fab;
 
     private AppDatabase mDb;
+    private AddNewsViewModel addNewsViewModel;
+
 
 
     @Override
@@ -71,17 +74,23 @@ public class DetailActivity extends AppCompatActivity {
         description = intent.getStringExtra(EXTRA_DESCRIPTION);
 
         mDb = AppDatabase.getAppDatabase(getApplicationContext());
+        addNewsViewModel = ViewModelProviders.of(this).get(AddNewsViewModel.class);
+
 
         fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                DbNews dbNews = new DbNews();
-                dbNews.setDb_newsPster(imgPoster);
-                dbNews.setDb_newsTitle(title);
-                dbNews.setDb_newsUrl(url);
-                mDb.newsDao().insertAll(dbNews);
-                Log.d("test", String.valueOf(dbNews.getDb_newsPster()));
+
+                addNewsViewModel.addBorrow(new DbNews(imgPoster, title, url));
+                finish();
+
+//                DbNews dbNews = new DbNews();
+//                dbNews.setDb_newsPster(imgPoster);
+//                dbNews.setDb_newsTitle(title);
+//                dbNews.setDb_newsUrl(url);
+//                mDb.newsDao().insertAll(dbNews);
+//                Log.d("test", String.valueOf(dbNews.getDb_newsPster()));
             }
         });
 

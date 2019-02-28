@@ -1,5 +1,6 @@
 package com.example.salah.ahmed.newsapp.Database;
 
+import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
 import android.arch.persistence.room.Delete;
 import android.arch.persistence.room.Insert;
@@ -13,12 +14,14 @@ import java.util.List;
 public interface NewsDao {
 
     @Query("SELECT * FROM dbnews")
-    List<DbNews> getAll();
+    LiveData<List<DbNews>> getAll();
 
+    @Query("select * from dbnews where db_id = :id")
+    DbNews getNewsbyId(String id);
 
     @Insert
     void insertAll(DbNews... dbNewss);
 
     @Delete
-    void delete(DbNews dbNews);
+    void deleteNews(DbNews dbNews);
 }
