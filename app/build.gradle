@@ -17,10 +17,10 @@ repositories {
 
 android {
     signingConfigs {
-        config {
-            keyAlias 'ReleaseKey'
+        KeyStore {
+            keyAlias 'KeyStore'
             keyPassword 'password'
-            storeFile file('E:/android/NewsApp/keystore/key.jks')
+            storeFile file('E:/android/NewsApp/keystore/KeyStore.jks')
             storePassword 'password'
         }
     }
@@ -47,6 +47,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.KeyStore
         }
     }
 }
