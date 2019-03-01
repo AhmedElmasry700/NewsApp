@@ -20,7 +20,7 @@ android {
         KeyStore {
             keyAlias 'KeyStore'
             keyPassword 'password'
-            storeFile file('E:/android/NewsApp/keystore/KeyStore.jks')
+            storeFile file("$rootDir/keystore/KeyStore.jks")
             storePassword 'password'
         }
     }
