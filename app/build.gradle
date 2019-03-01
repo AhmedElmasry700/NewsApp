@@ -38,7 +38,7 @@ android {
             release {
                 keyAlias 'androiddebugkey'
                 keyPassword 'android'
-                storeFile file('keystore/KeyStore.jks')
+                storeFile file('$rootDir/keystore/KeyStore.jks')
                 storePassword 'android'
             }
         }
