@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.salah.ahmed.newsapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <!--Merging Errors: Error: tools:replace specified at line:10 for attribute android:appComponentFactory,-->
+    <!--but no new value specified app main manifest (this file),-->
+    <!--line 9 Error: Validation failed, exiting app main manifest (this file)-->
+    <!--tools:replace="android:appComponentFactory"-->
     <application
         android:allowBackup="true"
         android:hardwareAccelerated="false"
@@ -14,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:fullBackupContent="@xml/backup_descriptor"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        tools:replace="android:appComponentFactory">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-6924769428980234~8166725243" />
@@ -36,6 +42,7 @@
         <activity android:name=".Activites.DetailActivity" />
 
         <receiver android:name=".Widget.NewAppWidget">
+
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>
@@ -44,6 +51,7 @@
                 android:name="android.appwidget.provider"
                 android:resource="@xml/new_app_widget_info" />
         </receiver>
+
         <meta-data
             android:name="io.fabric.ApiKey"
             android:value="1a7d1a89ed30e3193f34037e9b754db18697729c" />

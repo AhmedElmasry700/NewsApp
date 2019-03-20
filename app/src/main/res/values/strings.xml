@@ -27,5 +27,6 @@
     <string name="favorite">Favorite</string>
     <string name="search">Search</string>
     <string name="title">title</string>
+    <string name="what">whateverString</string>
 
 </resources>

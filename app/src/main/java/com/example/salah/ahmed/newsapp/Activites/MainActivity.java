@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         Fabric.with(this, new Crashlytics());
         setContentView(R.layout.activity_main);
 
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.btn_nav);
         bottomNavigationView.setOnNavigationItemSelectedListener(listener);
 
@@ -77,6 +78,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
 
 }
