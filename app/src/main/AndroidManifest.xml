@@ -20,6 +20,7 @@
         android:supportsRtl="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:theme="@style/AppTheme"
+        android:appComponentFactory="0"
         tools:replace="android:appComponentFactory">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
@@ -28,6 +29,7 @@
         <activity android:name=".Activites.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
